@@ -1,0 +1,116 @@
+/* ==========================================
+   Pixify
+   Utility Classes
+   Version: 1.0
+========================================== */
+
+/* ========= Display ========= */
+
+.hidden {
+    display: none !important;
+}
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+/* ========= Text ========= */
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* ========= Width & Height ========= */
+
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+/* ========= Overflow ========= */
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+/* ========= Border Radius ========= */
+
+.rounded-sm {
+    border-radius: var(--radius-sm);
+}
+
+.rounded-md {
+    border-radius: var(--radius-md);
+}
+
+.rounded-lg {
+    border-radius: var(--radius-lg);
+}
+
+.rounded-xl {
+    border-radius: var(--radius-xl);
+}
+
+.rounded-pill {
+    border-radius: var(--radius-pill);
+}
+
+/* ========= Shadows ========= */
+
+.shadow-sm {
+    box-shadow: var(--shadow-sm);
+}
+
+.shadow-md {
+    box-shadow: var(--shadow-md);
+}
+
+.shadow-lg {
+    box-shadow: var(--shadow-lg);
+}
+
+.shadow-float {
+    box-shadow: var(--shadow-float);
+}
+
+/* ========= Glass ========= */
+
+.glass {
+    background: rgba(255,255,255,.70);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,.45);
+}
+
+/* ========= Cursor ========= */
+
+.pointer {
+    cursor: pointer;
+}
+
+/* ========= User Selection ========= */
+
+.no-select {
+    user-select: none;
+}
+
+/* ========= Transition ========= */
+
+.transition {
+    transition: all var(--transition-normal);
+}
