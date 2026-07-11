@@ -1,0 +1,107 @@
+/* ==========================================
+   Pixify
+   Typography
+   Version: 1.0
+========================================== */
+
+/* Base */
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--fs-md);
+    font-weight: var(--fw-regular);
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-heading);
+    font-weight: var(--fw-bold);
+    line-height: 1.2;
+}
+
+/* Display Heading */
+
+.display-title {
+    font-size: var(--fs-4xl);
+    font-weight: var(--fw-bold);
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+}
+
+/* Hero Heading */
+
+.hero-title {
+    font-size: var(--fs-3xl);
+    font-weight: var(--fw-bold);
+    line-height: 1.15;
+}
+
+/* Section Heading */
+
+.section-title {
+    font-size: var(--fs-2xl);
+    font-weight: var(--fw-bold);
+}
+
+/* Card Title */
+
+.card-title {
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-semibold);
+}
+
+/* Large Body */
+
+.body-large {
+    font-size: var(--fs-lg);
+    color: var(--color-text);
+}
+
+/* Regular Body */
+
+.body-text {
+    font-size: var(--fs-md);
+    color: var(--color-text);
+}
+
+/* Small Text */
+
+.small-text {
+    font-size: var(--fs-sm);
+    color: var(--color-text-light);
+}
+
+/* Caption */
+
+.caption {
+    font-size: var(--fs-xs);
+    color: var(--color-text-light);
+}
+
+/* Logo */
+
+.logo-text {
+    font-family: var(--font-logo);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    letter-spacing: 0.02em;
+}
+
+/* Links */
+
+a {
+    transition: color var(--transition-normal);
+}
+
+a:hover {
+    color: var(--color-primary);
+}
