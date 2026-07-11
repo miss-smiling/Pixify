@@ -1,0 +1,38 @@
+/* ==========================================
+   Pixify
+   Main Stylesheet
+========================================== */
+
+/* ========= Base ========= */
+
+@import url("./base/variables.css");
+@import url("./base/reset.css");
+@import url("./base/typography.css");
+
+/* ========= Layout ========= */
+
+@import url("./layout/layout.css");
+@import url("./layout/utilities.css");
+@import url("./layout/animations.css");
+
+/* ========= Components ========= */
+
+/*
+Components will be imported here.
+
+Example:
+
+@import url("./components/navbar.css");
+@import url("./components/buttons.css");
+@import url("./components/cards.css");
+*/
+
+/* ========= Pages ========= */
+
+/*
+Page specific styles.
+
+Example:
+
+@import url("./pages/home.css");
+*/
