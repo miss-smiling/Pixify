@@ -6,6 +6,12 @@
  * ==========================================
  */
 
+import { Home } from "./pages/home.js";
+
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("🌸 Pixify initialized successfully.");
+
+    const app = document.getElementById("app");
+
+    app.innerHTML = Home();
+
 });
