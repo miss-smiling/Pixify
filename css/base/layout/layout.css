@@ -1,0 +1,190 @@
+/* ==========================================
+   Pixify
+   Layout System
+   Version: 1.0
+========================================== */
+
+/* ==========================================
+   PAGE WRAPPER
+========================================== */
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================
+   MAIN CONTENT
+========================================== */
+
+.main {
+    flex: 1;
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.container {
+    width: min(100% - 2rem, var(--container-width));
+    margin-inline: auto;
+}
+
+/* ==========================================
+   SECTIONS
+========================================== */
+
+.section {
+    padding-block: var(--space-11);
+}
+
+.section-sm {
+    padding-block: var(--space-8);
+}
+
+.section-lg {
+    padding-block: calc(var(--space-12) + var(--space-4));
+}
+
+/* ==========================================
+   FLEX LAYOUTS
+========================================== */
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-evenly {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+/* ==========================================
+   GRID LAYOUTS
+========================================== */
+
+.grid {
+    display: grid;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-6);
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-6);
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-6);
+}
+
+/* ==========================================
+   COMMON LAYOUT HELPERS
+========================================== */
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.cluster {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.flow > * + * {
+    margin-top: var(--space-4);
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1200px) {
+
+    .container {
+        width: min(100% - 3rem, 1100px);
+    }
+
+}
+
+@media (max-width: 1024px) {
+
+    .grid-4,
+    .grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .section {
+        padding-block: var(--space-9);
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        width: min(100% - 2rem, 100%);
+    }
+
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .section,
+    .section-lg {
+        padding-block: var(--space-8);
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .section,
+    .section-sm,
+    .section-lg {
+        padding-block: var(--space-7);
+    }
+
+}
