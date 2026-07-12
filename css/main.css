@@ -3,6 +3,12 @@
    Main Stylesheet
 ========================================== */
 
+
+
+/* ========= Navbar ========= */
+
+@import url("./components/navbar.css");
+
 /* ========= Base ========= */
 
 @import url("./base/variables.css");
