@@ -1,99 +1,153 @@
-/* ===========================
+/* ==========================================
    HERO
-=========================== */
+========================================== */
 
 .hero{
-    padding:80px 0 120px;
+    margin-top:32px;
 }
 
-.hero-container{
+.hero .container{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
 
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    align-items:center;
-    gap:80px;
+/* ==========================================
+   HERO CARD
+========================================== */
+
+.hero-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:32px;
+
+    background:linear-gradient(
+        135deg,
+        #fff9fc,
+        #fff3f8
+    );
+
+    min-height:520px;
+
+    box-shadow:
+        0 20px 60px rgba(255,140,180,.12);
 
 }
 
-.hero-badge{
+/* ==========================================
+   HERO IMAGE
+========================================== */
 
-    display:inline-block;
+.hero-scene{
 
-    padding:10px 18px;
+    width:100%;
 
-    border-radius:999px;
+    height:100%;
 
-    background:#FFE7F2;
+    object-fit:cover;
 
-    color:#FF5DA8;
-
-    font-weight:600;
-
-    margin-bottom:24px;
+    display:block;
 
 }
 
-.hero-title{
+/* ==========================================
+   TEXT OVERLAY
+========================================== */
+
+.hero-overlay{
+
+    position:absolute;
+
+    left:60px;
+
+    top:60px;
+
+    width:360px;
+
+    z-index:5;
+
+}
+
+.flower{
+
+    font-size:2.2rem;
+
+    color:#ff90bc;
+
+    margin-bottom:18px;
+
+}
+
+.hero-overlay h1{
 
     font-size:4rem;
 
-    line-height:1.1;
+    line-height:1.05;
 
     margin-bottom:24px;
 
 }
 
-.hero-title span{
+.hero-overlay span{
 
-    color:#FF7FB5;
+    color:#ff73ad;
 
 }
 
-.hero-description{
+.hero-overlay p{
 
-    font-size:1.1rem;
+    font-size:1rem;
 
-    line-height:1.8;
-
-    max-width:520px;
+    line-height:1.9;
 
     color:#666;
 
-    margin-bottom:36px;
+    margin-bottom:34px;
 
 }
+
+/* ==========================================
+   BUTTONS
+========================================== */
 
 .hero-buttons{
 
     display:flex;
 
-    gap:18px;
-
-    margin-bottom:50px;
+    gap:16px;
 
 }
 
-.btn{
+.hero-buttons .btn{
+
+    padding:15px 28px;
 
     border:none;
 
-    cursor:pointer;
-
     border-radius:999px;
 
-    padding:16px 28px;
-
-    font-size:1rem;
+    cursor:pointer;
 
     font-weight:600;
+
+    transition:.25s;
 
 }
 
 .btn-primary{
 
-    background:#FF7FB5;
+    background:#ff6fae;
 
     color:white;
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-2px);
 
 }
 
@@ -101,69 +155,59 @@
 
     background:white;
 
-    border:1px solid #FFD2E5;
+    border:1px solid #ffd3e7;
 
 }
+
+.btn-secondary:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================
+   STATS BAR
+========================================== */
 
 .hero-stats{
 
-    display:flex;
+    display:grid;
 
-    gap:20px;
+    grid-template-columns:repeat(4,1fr);
+
+    gap:0;
+
+    background:#fff6fa;
+
+    border-radius:22px;
+
+    padding:26px 18px;
+
+    box-shadow:
+        0 10px 35px rgba(255,145,190,.08);
 
 }
 
-.stat-card{
-
-    background:white;
-
-    padding:20px 26px;
-
-    border-radius:20px;
-
-    box-shadow:0 15px 40px rgba(0,0,0,.06);
+.stat{
 
     text-align:center;
 
 }
 
-.stat-card h3{
+.stat h3{
 
-    color:#FF7FB5;
+    color:#222;
 
-    font-size:1.8rem;
+    font-size:1.2rem;
 
-}
-
-.hero-preview{
-
-    display:flex;
-
-    justify-content:center;
+    margin-bottom:6px;
 
 }
 
+.stat span{
 
-.hero-preview{
-    display:flex;
-    justify-content:flex-end;
-    align-items:center;
-}
+    color:#888;
 
-.hero-preview img{
-    width:100%;
-    max-width:760px;
-    display:block;
-    border-radius:28px;
-}
-
-   
-
-
-.preview-card img{
-
-    width:85%;
-
-    object-fit:contain;
+    font-size:.92rem;
 
 }
