@@ -1,54 +1,192 @@
+/* ===========================
+   NAVBAR
+=========================== */
+
 .navbar{
-    width:100%;
-    padding:20px 0;
+    position:sticky;
+    top:24px;
+    z-index:1000;
+    padding:0 24px;
 }
+
+/* Floating Glass Container */
 
 .navbar-container{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
 
-.logo{
+    max-width:1280px;
+    margin:auto;
+
+    height:74px;
+
     display:flex;
     align-items:center;
-    gap:12px;
+    justify-content:space-between;
+
+    padding:0 24px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.72);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.45);
+
+    box-shadow:
+        0 10px 40px rgba(255,127,181,.12),
+        0 20px 60px rgba(0,0,0,.06);
+
+}
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+
     text-decoration:none;
+
 }
 
 .logo-icon{
+
     width:42px;
     height:42px;
+
 }
 
 .logo-text{
-    font-size:1.8rem;
-    font-weight:700;
-}
 
+    font-size:1.65rem;
+
+    font-weight:700;
+
+    color:var(--text-dark);
+
+}
 .nav-links{
+
     display:flex;
-    gap:32px;
+    gap:34px;
+
 }
 
 .nav-link{
+
     text-decoration:none;
+
+    color:#4E4E62;
+
+    font-weight:500;
+
+    transition:.25s;
+
 }
 
-.nav-actions{
-    display:flex;
-    align-items:center;
-    gap:16px;
+.nav-link:hover{
+
+    color:#FF7FB5;
+
 }
 
+.nav-link.active{
+
+    color:#FF7FB5;
+
+}
 .search-wrapper{
+
     display:flex;
     align-items:center;
-    gap:8px;
+
+    gap:10px;
+
+    width:260px;
+
+    padding:12px 18px;
+
+    border-radius:999px;
+
+    background:#fff;
+
+}
+
+.search-icon{
+
+    width:18px;
+
 }
 
 .search-input{
+
+    flex:1;
+
     border:none;
-    outline:none;
+
     background:none;
+
+    outline:none;
+
+    font-family:inherit;
+
+}
+.nav-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.cart-btn,
+.signin-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:999px;
+
+    transition:.3s;
+
+}
+
+.cart-btn{
+
+    width:48px;
+
+    height:48px;
+
+    justify-content:center;
+
+    background:white;
+
+}
+
+.signin-btn{
+
+    padding:14px 22px;
+
+    background:#FF7FB5;
+
+    color:white;
+
+    font-weight:600;
+
+}
+
+.signin-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 24px rgba(255,127,181,.25);
+
 }
