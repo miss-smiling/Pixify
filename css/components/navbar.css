@@ -1,1 +1,54 @@
-.
+.navbar{
+    width:100%;
+    padding:20px 0;
+}
+
+.navbar-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+}
+
+.logo-icon{
+    width:42px;
+    height:42px;
+}
+
+.logo-text{
+    font-size:1.8rem;
+    font-weight:700;
+}
+
+.nav-links{
+    display:flex;
+    gap:32px;
+}
+
+.nav-link{
+    text-decoration:none;
+}
+
+.nav-actions{
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+.search-wrapper{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.search-input{
+    border:none;
+    outline:none;
+    background:none;
+}
