@@ -1,5 +1,5 @@
 import { Navbar } from "../components/navbar/navbar.js";
-
+import { Hero } from "../components/hero/hero.js";
 export function Home() {
 
     return `
@@ -11,7 +11,7 @@ export function Home() {
             <main class="main">
 
                 <!-- Hero Section -->
-                <section id="hero"></section>
+               ${Hero()}
 
                 <!-- Statistics -->
                 <section id="statistics"></section>
