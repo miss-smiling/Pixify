@@ -1,6 +1,6 @@
-/* ==========================================
+/* ===================================================
    HERO
-========================================== */
+=================================================== */
 
 .hero{
     margin-top:32px;
@@ -9,22 +9,27 @@
 .hero .container{
     display:flex;
     flex-direction:column;
-    gap:22px;
+    gap:24px;
 }
 
-/* ==========================================
+/* ===================================================
    HERO CARD
-========================================== */
+=================================================== */
 
-  .hero-card{
+.hero-card{
+
     position:relative;
-    overflow:hidden;
-    border-radius:32px;
-}
 
-/* ==========================================
-   HERO IMAGE
-========================================== */
+    width:100%;
+
+    overflow:hidden;
+
+    border-radius:32px;
+
+    box-shadow:
+        0 20px 50px rgba(255,127,181,.10);
+
+}
 
 .hero-scene{
 
@@ -32,56 +37,71 @@
 
     display:block;
 
+    user-select:none;
+
+    pointer-events:none;
+
 }
 
-/* ==========================================
-   TEXT OVERLAY
-========================================== */
+/* ===================================================
+   HERO OVERLAY
+=================================================== */
 
 .hero-overlay{
 
     position:absolute;
 
-    top:60px;
+    top:65px;
 
-    left:55px;
+    left:60px;
 
-    width:320px;
+    width:360px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    z-index:2;
 
 }
-
 
 .hero-overlay h1{
 
+    margin:0;
+
     font-size:4rem;
+
+    font-weight:700;
 
     line-height:1.05;
 
-    margin-bottom:24px;
+    color:#2C2738;
 
 }
 
-.hero-overlay span{
+.hero-overlay h1 span{
 
-    color:#ff73ad;
+    color:#FF73AF;
 
 }
 
 .hero-overlay p{
 
-    font-size:1rem;
-
-    line-height:1.9;
+    margin:26px 0 34px;
 
     color:#666;
 
-    margin-bottom:34px;
+    font-size:1rem;
+
+    line-height:1.8;
 
 }
 
-/* ==========================================
+/* ===================================================
    BUTTONS
-========================================== */
+=================================================== */
 
 .hero-buttons{
 
@@ -91,33 +111,42 @@
 
 }
 
-.hero-buttons .btn{
-
-    padding:15px 28px;
+.hero-buttons button{
 
     border:none;
 
-    border-radius:999px;
+    outline:none;
 
     cursor:pointer;
 
+    transition:.25s ease;
+
+    font-family:inherit;
+
     font-weight:600;
 
-    transition:.25s;
+    font-size:.95rem;
 
 }
 
 .btn-primary{
 
-    background:#ff6fae;
+    background:#FF73AF;
 
     color:white;
+
+    padding:15px 28px;
+
+    border-radius:14px;
+
+    box-shadow:
+        0 12px 24px rgba(255,115,175,.22);
 
 }
 
 .btn-primary:hover{
 
-    transform:translateY(-2px);
+    transform:translateY(-3px);
 
 }
 
@@ -125,19 +154,27 @@
 
     background:white;
 
-    border:1px solid #ffd3e7;
+    color:#444;
+
+    border:1px solid #FFD8E8;
+
+    padding:15px 26px;
+
+    border-radius:14px;
 
 }
 
 .btn-secondary:hover{
 
-    transform:translateY(-2px);
+    transform:translateY(-3px);
+
+    background:#FFF7FB;
 
 }
 
-/* ==========================================
+/* ===================================================
    STATS BAR
-========================================== */
+=================================================== */
 
 .hero-stats{
 
@@ -145,39 +182,175 @@
 
     grid-template-columns:repeat(4,1fr);
 
-    gap:0;
+    background:white;
 
-    background:#fff6fa;
+    border-radius:24px;
 
-    border-radius:22px;
-
-    padding:26px 18px;
+    overflow:hidden;
 
     box-shadow:
-        0 10px 35px rgba(255,145,190,.08);
+        0 15px 40px rgba(255,127,181,.08);
 
 }
 
 .stat{
 
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:28px 20px;
+
     text-align:center;
+
+}
+
+.stat:not(:last-child){
+
+    border-right:1px solid #F4E5EE;
 
 }
 
 .stat h3{
 
-    color:#222;
+    margin:0 0 6px;
 
-    font-size:1.2rem;
+    font-size:1.4rem;
 
-    margin-bottom:6px;
+    color:#2C2738;
 
 }
 
 .stat span{
 
-    color:#888;
+    font-size:.95rem;
 
-    font-size:.92rem;
+    color:#777;
+
+}
+
+/* ===================================================
+   HOVER
+=================================================== */
+
+.stat{
+
+    transition:.25s;
+
+}
+
+.stat:hover{
+
+    background:#FFF9FC;
+
+}
+
+/* ===================================================
+   RESPONSIVE
+=================================================== */
+
+@media (max-width:1200px){
+
+    .hero-overlay{
+
+        width:320px;
+
+        top:50px;
+
+        left:45px;
+
+    }
+
+    .hero-overlay h1{
+
+        font-size:3.4rem;
+
+    }
+
+}
+
+@media (max-width:992px){
+
+    .hero-overlay{
+
+        position:relative;
+
+        top:auto;
+
+        left:auto;
+
+        width:100%;
+
+        padding:40px;
+
+    }
+
+    .hero-card{
+
+        display:flex;
+
+        flex-direction:column;
+
+    }
+
+    .hero-scene{
+
+        order:2;
+
+    }
+
+    .hero-stats{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .hero-overlay{
+
+        padding:28px;
+
+    }
+
+    .hero-overlay h1{
+
+        font-size:2.7rem;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+    .hero-buttons button{
+
+        width:100%;
+
+    }
+
+    .hero-stats{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .stat:not(:last-child){
+
+        border-right:none;
+
+        border-bottom:1px solid #F4E5EE;
+
+    }
 
 }
