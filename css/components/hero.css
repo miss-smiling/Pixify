@@ -143,25 +143,22 @@
 
 }
 
-.preview-card{
 
-    width:500px;
-
-    height:340px;
-
-    border-radius:32px;
-
-    background:linear-gradient(135deg,#FFEAF4,#FFF8FC);
-
+.hero-preview{
     display:flex;
-
+    justify-content:flex-end;
     align-items:center;
-
-    justify-content:center;
-
-    box-shadow:0 30px 70px rgba(255,127,181,.18);
-
 }
+
+.hero-preview img{
+    width:100%;
+    max-width:760px;
+    display:block;
+    border-radius:28px;
+}
+
+   
+
 
 .preview-card img{
 
