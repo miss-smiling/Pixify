@@ -1,37 +1,44 @@
 export function Navbar() {
-
     return `
+    <header class="navbar">
 
-<header class="navbar">
+        <div class="container navbar-container">
 
-    <div class="container">
+            <a href="#" class="logo">
+                🌸 Pixify
+            </a>
 
-        <div class="navbar-wrapper">
+            <nav class="nav-links">
 
-            <div class="navbar-logo">
-
-                Logo
-
-            </div>
-
-            <nav class="navbar-menu">
-
-                Navigation
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">Collections</a>
+                <a href="#">About</a>
+                <a href="#">Donate</a>
 
             </nav>
 
-            <div class="navbar-actions">
+            <div class="nav-actions">
 
-                Actions
+                <input
+                    type="search"
+                    class="search-box"
+                    placeholder="Search themes..."
+                >
+
+                <button class="cart-btn">
+                    🛒
+                    <span class="cart-count">0</span>
+                </button>
+
+                <button class="login-btn">
+                    Sign In
+                </button>
 
             </div>
 
         </div>
 
-    </div>
-
-</header>
-
-`;
-
+    </header>
+    `;
 }
